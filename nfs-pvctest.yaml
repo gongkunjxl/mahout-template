@@ -1,0 +1,10 @@
+piVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: nfs-pvctest
+spec:
+    accessModes:
+     - ReadWriteMany
+    resources:
+        requests:
+            storage: 10Gi

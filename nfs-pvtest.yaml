@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+    name: pvtest
+spec:
+    capacity:
+        storage: 10Gi
+    accessModes:
+        - ReadWriteMany
+    nfs:
+        path: /data/nfstest/      
+        server: 192.168.1.100
+        readOnly: false
+    persistentVolumeReclaimPolicy: Recycle
